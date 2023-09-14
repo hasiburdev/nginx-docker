@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "nginx:build": "docker build -t nginx-web .",
-    "nginx:start": "docker run --name nginx -p 80:80 --net=host -d --hostname ng1 -v /home/hasibur/Documents/GitHub/nginx-docker/nginx/nginx.conf:/etc/nginx/nginx.conf nginx-web",
+    "nginx:start": "docker run --name nginx -p 80:80 --net=host -d --hostname ng1 nginx-web",
     "nginx:stop": "docker stop nginx",
     "nginx:rm": "docker container rm nginx",
     "nginx:clean": "pnpm nginx:stop && pnpm nginx:rm"
