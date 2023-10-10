@@ -7,8 +7,8 @@
     "build": "docker build -t nginx-web .",
     "start": "docker run --name nginx -p 80:80 --net=host -d --hostname ng1 nginx-web",
     "stop": "docker stop nginx",
-    "rm": "docker container rm nginx",
-    "clean": "pnpm nginx:stop && pnpm nginx:rm"
+    "delete": "docker container rm nginx",
+    "clean": "pnpm stop && pnpm delete"
   },
   "keywords": [],
   "author": "",
